@@ -83,7 +83,7 @@ client.on(`message`, message =>{
                 fields: [
                 {
                         name: "***Règles :***",
-                    value: " • Ne pas insulter \n • Ne pas spam \n • Ne pas abuser des majuscules \n • Respecter les autres membres du Discord ainsi que le Staff \n • Ne pas mentionner les membres du staff inutilement \n • Avoir une bonne écriture/orthographe \n • Ne pas pub sauf dans le salon conçu spécialement pour \n • Ne pas faire les commandes bots dans le général ou autres mais bien dans le salon prévu à cet effet",
+                    value: " • Ne pas insulter \n • Ne pas spam/flood \n • Ne pas abuser des majuscules \n • Respecter les autres membres du Discord ainsi que le Staff \n • Ne pas mentionner les membres du staff inutilement \n • Ne pas pub en message privé \n • Avoir une bonne écriture/orthographe \n • Ne pas pub sauf dans le salon conçu spécialement pour \n • Ne pas faire les commandes bots dans le général ou autres mais bien dans le salon prévu à cet effet",
                     inline: true
                 },
                 {
@@ -99,6 +99,11 @@ client.on(`message`, message =>{
                 {
                     name: "Chose à retenir et une des plus importantes...",
                     value: "Amusez-vous, tout en respectant les règles !",
+                    inline: true
+                },
+                {
+                    name: "Pour accepter le règlement",
+                    value: "appuyer sur :white_check_mark: !",
                     inline: true
                 }],
                 timestamp: new Date(),
