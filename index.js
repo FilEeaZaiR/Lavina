@@ -107,7 +107,6 @@ client.on(`message`, message =>{
                     text: `Règles du serveur d'Ananas | FilEeaZaiR#1258`,
                 }
             }
-        message.guild.member(message.author).delete()
         });
     }
 });
