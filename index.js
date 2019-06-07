@@ -80,7 +80,7 @@ client.on(`message`, message =>{
         message.channel.send({
             embed: {
                 color: 0xFE6F01,
-                title: "Bienvenue sur le Discord de d'Ananas",
+                title: "Bienvenue sur le Discord d'Ananas",
                 fields: [
                 {
                         name: "***Règles :***",
