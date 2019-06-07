@@ -74,7 +74,6 @@ client.on("guildMemberAdd", member => {
 client.on(`message`, message =>{
 
 //Commande help générale :
-    if(!message.guild.member(message.author).hasPermission("ADMINISTRATOR")) return message.channel.send("Vous n'avez pas la permission !");
     if(message.content === prefix + "règles" || message.content === prefix + "règlements") {
         console.log(`Un utilisateur viens de faire la commande règles !`)
         message.channel.send({
@@ -84,7 +83,7 @@ client.on(`message`, message =>{
                 fields: [
                 {
                         name: "***Règles :***",
-                    value: " • Ne pas insulter \n • Ne pas abuser des majuscules \n • Respecter les autres membres du Discord ainsi que le Staff \n • Avoir une bonne écriture/orthographe \n • Ne pas pub sauf dans le salon conçu spécialement pour \n • Ne pas faire les commandes bots dans le #deleted-channel  ou autres mais bien dans le salon prévu à cet effet",
+                    value: " • Ne pas insulter \n • Ne pas spam \n • Ne pas abuser des majuscules \n • Respecter les autres membres du Discord ainsi que le Staff \n • Avoir une bonne écriture/orthographe \n • Ne pas pub sauf dans le salon conçu spécialement pour \n • Ne pas faire les commandes bots dans le #deleted-channel  ou autres mais bien dans le salon prévu à cet effet",
                     inline: true
                 },
                 {
