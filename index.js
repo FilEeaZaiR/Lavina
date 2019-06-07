@@ -69,3 +69,45 @@ client.on("guildMemberAdd", member => {
         }
     });
 });
+
+//Début de la commande règlements :
+client.on(`message`, message =>{
+
+//Commande help générale :
+    if(!message.guild.member(message.author).hasPermission("ADMINISTRATOR")) return message.channel.send("Vous n'avez pas la permission !");
+    if(message.content === prefix + "règles" || message.content === prefix + "règlements") {
+    console.log(`Un utilisateur viens de faire la commande règles !`)
+    message.channel.send({
+        embed: {
+            color: 0xFE6F01,
+            title: "Bienvenue sur le Discord de d'Ananas",
+            fields: [
+            {
+                name: "***Règles :***",
+                value: " • Ne pas insulter \n • Ne pas abuser des majuscules \n • Respecter les autres membres du Discord ainsi que le Staff \n • Avoir une bonne écriture/orthographe \n • Ne pas pub sauf dans le salon conçu spécialement pour \n • Ne pas faire les commandes bots dans le #deleted-channel  ou autres mais bien dans le salon prévu à cet effet",
+                inline: true
+            },
+            {
+                name: "Si ces règles ne sont pas respectées",
+                value: "vous risquez l’exclusion voir le **ban**",
+                inline: true
+            },
+            {
+                name: "**À savoir :**",
+                value: "Nous ouvrons de temps à autres des candidatures pour le grade @Modérateurs . Alors si cela vous intéresse allez dans Annonces  vous y trouverez tout. Si vous pensez avoir les compétences requises et que les candidatures sont ouvertes la candidature devra être envoyée à Luma en privé. \n\nJe répète qu’il est primordial d’utiliser les bons salons ! \n\nLes insultes sont tolérées mais à titre de plaisanterie \n*Exemple : Connard va :joy:*",
+                inline: true
+            },
+            {
+                name: "Chose à retenir et une des plus importantes...",
+                value: "Amusez-vous, tout en respectant les règles !",
+                inline: true
+            }],
+            timestamp: new Date(),
+            footer: {
+                text: `Règles du serveur d'Ananas | FilEeaZaiR#1258`,
+            }
+        }
+    message.delete()
+    });
+}
+});
