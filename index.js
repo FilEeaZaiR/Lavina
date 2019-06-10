@@ -120,7 +120,6 @@ client.on(`message`, message =>{
         message.channel.send({
             embed: {
                 color: 0xFE6F01,
-                title: "Hey @everyone",
                 fields: [
                 {
                     name: "vous voulez avoir un rôle",
@@ -128,38 +127,38 @@ client.on(`message`, message =>{
                     inline: false
                 },
                 {
-                    name: "<@&586249085086990336> :",
+                    name: "EnderMine :",
                     value: "Appuyez sur :pick:",
                     inline: false
                 },
                 {
-                    name: "<@&586249089835073556> :",
+                    name: "Filles :",
                     value: "Appuyez sur :girl:",
                     inline: false
                 },
                 {
-                    name: "<@&586249094062800907> :",
+                    name: "Garçons :",
                     value: "Appuyez sur :boy:",
                     inline: false
                 },
                 {
-                    name: "<@&587217102965047316>",
+                    name: "+18 :",
                     value: "Appuyez sur :middle_finger: (cette émoji, c'est pour les majeurs ^^)",
-                    inline: true
+                    inline: false
                 },
                 {
-                    name: "<@&587217110460268565>",
+                    name: "-18 :",
                     value: "Appuyez sur :underage:",
-                    inline: true
+                    inline: false
                 },
                 {
-                    name: "<@&587217460319485952>",
+                    name: "DiscRôle :",
                     value: "Appuyez sur :tada:",
-                    inline: true
+                    inline: false
                 }],
                 timestamp: new Date(),
                 footer: {
-                    text: `Règles du serveur d'Ananas | FilEeaZaiR#1258`,
+                    text: `AddRole | FilEeaZaiR#1258`,
                 }
             }
         });
