@@ -122,8 +122,8 @@ client.on(`message`, message =>{
                 color: 0xFE6F01,
                 fields: [
                 {
-                    name: "vous voulez avoir un rôle",
-                    value: "alors voici des rôles disponible :",
+                    name: "Vous voulez avoir un rôle",
+                    value: "Alors voici des rôles disponible :",
                     inline: false
                 },
                 {
