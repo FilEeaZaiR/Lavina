@@ -113,4 +113,55 @@ client.on(`message`, message =>{
             }
         });
     }
+    
+//Commande help générale :
+    if(message.content === prefix + "role" || message.content === prefix + "raddrole") {
+        console.log(`Un utilisateur viens de faire la commande roles !`)
+        message.channel.send({
+            embed: {
+                color: 0xFE6F01,
+                title: "Hey @everyone",
+                fields: [
+                {
+                    name: "vous voulez avoir un rôle",
+                    value: "alors voici des rôles disponible :",
+                    inline: false
+                },
+                {
+                    name: "<@&586249085086990336> :",
+                    value: "Appuyez sur :pick:",
+                    inline: false
+                },
+                {
+                    name: "<@&586249089835073556> :",
+                    value: "Appuyez sur :girl:",
+                    inline: false
+                },
+                {
+                    name: "<@&586249094062800907> :",
+                    value: "Appuyez sur :boy:",
+                    inline: false
+                },
+                {
+                    name: "<@&587217102965047316>",
+                    value: "Appuyez sur :middle_finger: (cette émoji, c'est pour les majeurs ^^)",
+                    inline: true
+                },
+                {
+                    name: "<@&587217110460268565>",
+                    value: "Appuyez sur :underage:",
+                    inline: true
+                },
+                {
+                    name: "<@&587217460319485952>",
+                    value: "Appuyez sur :tada:",
+                    inline: true
+                }],
+                timestamp: new Date(),
+                footer: {
+                    text: `Règles du serveur d'Ananas | FilEeaZaiR#1258`,
+                }
+            }
+        });
+    }
 });
