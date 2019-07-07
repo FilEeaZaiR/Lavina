@@ -40,9 +40,6 @@ client.on("guildMemberAdd", member => {
     const logs = member.guild.channels.find(m => m.id === "592964350709596162");
     if (!logs) return;
 
-    var role = member.guild.roles.find(r => r.id === "&592822737102176258");
-    member.addRole(role).catch(console.error);
-
     logs.send({
         embed: {
             color: 0xFE6F01,
