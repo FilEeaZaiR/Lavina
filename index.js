@@ -10,7 +10,7 @@ var party_launch = false;
 
 var fs = require('fs');
 
-var prefix = "x|";
+var prefix = "f.";
 
 //Login + connexion du bot :
 client.login(process.env.TOKEN);
@@ -20,8 +20,8 @@ client.on("ready", () => {
     setInterval(function() {
 
         var statut = [
-          `x|help for help ^^`, 
-          `Lavina By FilEeaZaiR`,
+          `f.help for help ^^`, 
+          `Lymire By FilEeaZaiR`,
           `${client.users.size} users`];
     
         var random = Math.floor(Math.random()*(statut.length));
@@ -37,10 +37,10 @@ client.on("ready", () => {
 
 client.on("guildMemberAdd", member => {
 
-    const logs = member.guild.channels.find(m => m.id === "556577318823526408");
+    const logs = member.guild.channels.find(m => m.id === "592964350709596162");
     if (!logs) return;
 
-    var role = member.guild.roles.find(r => r.id === "555793675066540042");
+    var role = member.guild.roles.find(r => r.id === "&592822737102176258");
     member.addRole(role).catch(console.error);
 
     logs.send({
@@ -79,7 +79,7 @@ client.on(`message`, message =>{
         message.channel.send({
             embed: {
                 color: 0xFE6F01,
-                title: "Bienvenue sur le Discord d'Ananas",
+                title: "Bienvenue sur le Discord de FilEeaZaiR",
                 fields: [
                 {
                         name: "***Règles :***",
@@ -108,27 +108,22 @@ client.on(`message`, message =>{
                 }],
                 timestamp: new Date(),
                 footer: {
-                    text: `Règles du serveur d'Ananas | FilEeaZaiR#1258`,
+                    text: `Règles du serveur de FilEeaZaiR | FilEeaZaiR#1258`,
                 }
             }
         });
     }
     
 //Commande help générale :
-    if(message.content === prefix + "role" || message.content === prefix + "raddrole") {
+    if(message.content === prefix + "role1" || message.content === prefix + "addrole1") {
         console.log(`Un utilisateur viens de faire la commande roles !`)
         message.channel.send({
             embed: {
                 color: 0xFE6F01,
                 fields: [
                 {
-                    name: "Vous voulez avoir un rôle",
+                    name: "Catégorie de sexe :",
                     value: "Alors voici des rôles disponible :",
-                    inline: false
-                },
-                {
-                    name: "EnderMine :",
-                    value: "Appuyez sur :pick:",
                     inline: false
                 },
                 {
@@ -140,20 +135,54 @@ client.on(`message`, message =>{
                     name: "Garçons :",
                     value: "Appuyez sur :boy:",
                     inline: false
-                },
+                }],
+                timestamp: new Date(),
+                footer: {
+                    text: `AddRole | FilEeaZaiR#1258`,
+                }
+            }
+        });
+    }
+    
+    if(message.content === prefix + "role2" || message.content === prefix + "addrole2") {
+        console.log(`Un utilisateur viens de faire la commande roles !`)
+        message.channel.send({
+            embed: {
+                color: 0xFE6F01,
+                fields: [
                 {
-                    name: "+18 :",
-                    value: "Appuyez sur :middle_finger: (cette émoji, c'est pour les majeurs ^^)",
+                    name: "Catégorie d'âge :",
+                    value: "Alors voici des rôles disponible :",
                     inline: false
                 },
                 {
-                    name: "-18 :",
-                    value: "Appuyez sur :underage:",
+                    name: "-10 ans :",
+                    value: "Appuyez sur :one:",
                     inline: false
                 },
                 {
-                    name: "DiscRôle :",
-                    value: "Appuyez sur :tada:",
+                    name: "10/12 ans :",
+                    value: "Appuyez sur :two:",
+                    inline: false
+                },
+                {
+                    name: "12/14 ans :",
+                    value: "Appuyez sur :three:",
+                    inline: false
+                },
+                {
+                    name: "14/16 ans :",
+                    value: "Appuyez sur :four:",
+                    inline: false
+                },
+                {
+                    name: "16/18 ans :",
+                    value: "Appuyez sur :five:",
+                    inline: false
+                },
+                {
+                    name: "+18 ans :",
+                    value: "Appuyez sur :six:",
                     inline: false
                 }],
                 timestamp: new Date(),
